@@ -1,0 +1,26 @@
+2019-03-12 17:12:57.616  INFO 5656 --- [restartedMain] c.e.demo.SpringBootDemoApplication       : Starting SpringBootDemoApplication on PC-20180926ADWY with PID 5656 (started by Administrator in E:\intellj开发工具保存文件\springBoot\springBootDemo)
+2019-03-12 17:12:57.633  INFO 5656 --- [restartedMain] c.e.demo.SpringBootDemoApplication       : No active profile set, falling back to default profiles: default
+2019-03-12 17:12:57.808  INFO 5656 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-03-12 17:12:57.809  INFO 5656 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-03-12 17:12:59.202  INFO 5656 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-12 17:12:59.206  INFO 5656 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-12 17:12:59.245  INFO 5656 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
+2019-03-12 17:12:59.643  INFO 5656 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e4623d68] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-12 17:13:00.227  INFO 5656 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-03-12 17:13:00.255  INFO 5656 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-12 17:13:00.256  INFO 5656 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-12 17:13:00.263  INFO 5656 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\java\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;E:\Oracle\product\12.2.0\dbhome_1\bin;D:\java\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Mysql\bin;E:\TortoiseSVN\bin;E:\Git\cmd;D:\Python;D:\SQLite;D:\Python\Lib\site-packages\django\bin;D:\MongoDB\Server\4.0\bin;D:\Redis\;E:\Maven3.6\apache-maven-3.6.0\bin;D:\Python\Scripts\;D:\Python\;D:\PyCharm 2018.3\bin;;E:\Telerik Fiddler Web Debugger\Fiddler;.]
+2019-03-12 17:13:00.560  INFO 5656 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-03-12 17:13:00.566  INFO 5656 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-12 17:13:00.566  INFO 5656 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2757 ms
+2019-03-12 17:13:01.553  INFO 5656 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-12 17:13:01.722  INFO 5656 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-03-12 17:13:02.008  INFO 5656 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-03-12 17:13:02.083  INFO 5656 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-12 17:13:02.087  INFO 5656 --- [restartedMain] c.e.demo.SpringBootDemoApplication       : Started SpringBootDemoApplication in 5.288 seconds (JVM running for 8.359)
+2019-03-12 17:13:08.863  INFO 5656 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-12 17:13:08.864  INFO 5656 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-12 17:13:08.876  INFO 5656 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2019-03-12 17:13:09.421  INFO 5656 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-03-12 17:13:09.422  WARN 5656 --- [http-nio-8080-exec-3] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2019-03-12 17:13:10.133  INFO 5656 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.

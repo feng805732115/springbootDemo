@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>展示信息</title>
+</head>
+<body>
+<h2 th:text="${title}"></h2>
+发表于：<p th:text="${reportTime}"></p>
+<p th:text="${content}"></p>
+<span id="infoId" th:text="${infoId}" th:hidden="true"/>
+<span id="replyCount" th:text="${replyCount}" th:hidden="true"/>
+<h3>读者回应</h3>
+<div id="readerReply"th:each="replies,repliesStat:${repliesList}" style="background-color: lightgray">
+    <p th:text="'发表于：'+${#dates.format(replies.replyTime,'yyyy-MM-dd')}"></p>
+    <p th:text="${replies.content}"> </p>
+</div>
+<h5>快速回复（字数200字以内）</h5>
+<form id="replies" action="javascript:;">
+    <textarea id="showText" rows="4" cols="9"></textarea><span id="error"></span><br/>
+    <input type="submit" value="提交"/>
+    <a href="/home">返回首页</a>
+</form>
+<script src="../js/jquery-1.12.4.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $("#showText").blur(function () {
+            var showText=$(this).val();
+            if (showText.length-200>0||showText ==""){
+                $("#error").html("请填写回复内容").css("color","red");
+            }
+        });
+        $("#replies").submit(function () {
+            var showText=$("#showText").val();
+            var replyCount=$("#replyCount").text();
+             var infoId=$("#infoId").text();
+            $.ajax({
+                url:"submitRelies",
+                type:"get",
+                dataType:"text",
+                data:{"showText":showText,"replyCount":replyCount,"infoId":infoId},
+                success:function (data) {
+                    var result= eval('(' + data + ')');
+                    if (data=="error"){
+                        alert("回复留言失败！！")
+                    }else if(result.success=="success"){
+                        $("#readerReply").before("<div style=\"background-color: lightgray\"><p>发表于："+result.replyTime+"</p><p>"+result.content+"</p></div>");
+                        $("#showText").val("");
+                    }
+                },
+                error:function () {
+
+                },
+            });
+        });
+    })
+</script>
+</body>
+</html>

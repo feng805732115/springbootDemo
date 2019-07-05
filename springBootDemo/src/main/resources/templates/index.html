@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>手机资讯网</h2>
+<table border="1">
+    <tr>
+        <td>序号</td>
+        <td>标题</td>
+        <td>回复/查看</td>
+        <td>发表时间</td>
+        <td>最新回复</td>
+    </tr>
+    <tr th:each="information,informationStat:${informations}">
+        <span id="content" th:text="${information.content}" th:hidden="true"></span>
+        <td th:text="${information.infoId}"></td>
+        <td><a id="title" href="javascript:;" th:text="${information.title}"></a></td>
+        <td th:text="${information.replyCount}+'/'+${information.viewCount}"></td>
+        <td th:text="${#dates.format(information.reportTime,'yyyy-MM-dd')}"></td>
+        <td th:text="${#dates.format(information.lastPostTime,'yyyy-MM-dd')}"></td>
+    </tr>
+</table>
+
+<script src="../js/jquery-1.12.4.js"></script>
+<script>
+    $(document).ready(function () {
+        $("a").click(function () {
+            var title=$(this).text();
+            var count=$(this).parent().next().text();
+            var id=$(this).parent().prev().text();
+            var content=$(this).parent().prev().prev().text();
+            var reportTime=$(this).parent().next().next().text();
+            $("body").load("showInfo","count="+count+"&id="+id+"&title="+title+"&content="+content+"&reportTime="+reportTime);
+        });
+    })
+
+
+</script>
+</body>
+</html>
