@@ -2,11 +2,11 @@ package com.example.demo.pojo;
 
 public class User {
     /**
-     * 登录名
+     * 登录名2
      */
     private String LoginName;
     /**
-     * 密码
+     * 密码2
      */
     private String password;
 
