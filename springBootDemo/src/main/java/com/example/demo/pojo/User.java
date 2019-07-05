@@ -1,9 +1,14 @@
 package com.example.demo.pojo;
 
 public class User {
+    /**
+     * 登录名
+     */
     private String LoginName;
+    /**
+     * 密码
+     */
     private String password;
-
 
     public String getLoginName() {
         return LoginName;
